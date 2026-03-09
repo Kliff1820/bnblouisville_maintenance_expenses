@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  body {
+    background-color: #F4EFEA;
+    color: #1A293C;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .fadein {
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .container {
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .brand {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    color: #1A293C;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 10vw;
+    line-height: 1.15;
+    margin: 0 0 30px 0;
+    color: #1A293C;
+  }
+  @media (min-width: 768px) {
+    h1 { font-size: 85px; }
+  }
+  .successword {
+    font-style: italic;
+    color: #8C7A6B;
+  }
+  .bottomsection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #E5E0D8;
+    padding-top: 40px;
+  }
+  .message {
+    flex: 1 1 300px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5A6069;
+  }
+  .actionarea {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media (max-width: 768px) {
+    .actionarea { justify-content: flex-start; }
+  }
+  .btn {
+    background: linear-gradient(to right, #1A293C 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border: 1px solid #1A293C;
+    color: #1A293C;
+    padding: 18px 35px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  .btn:hover {
+    background-position: left bottom;
+    color: #FFFFFF;
+  }
+  a { text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="container fadein">
+    <div class="brand">
+      BNB Louisville
+    </div>
+
+    <h1>
+      Expense<br>Recorded<br><span class="successword">Successfully.</span>
+    </h1>
+    
+    <div class="bottomsection">
+      <div class="message">
+        The expense and receipt have been securely logged. Thank you for keeping our financial records accurate and up to date.
+      </div>
+      
+      <div class="actionarea">
+        <a href="https://tally.so/r/Xx0DEP">
+          <button class="btn">
+            RECORD ANOTHER EXPENSE &rarr;
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
