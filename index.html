@@ -102,6 +102,49 @@
     color: #FFFFFF;
   }
   a { text-decoration: none; }
+
+  /* ── Other Forms Navigation ── */
+  .otherforms {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #E5E0D8;
+  }
+  .otherforms-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #8C7A6B;
+    margin-bottom: 20px;
+  }
+  .otherforms-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 40px;
+  }
+  .otherforms-link {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1A293C;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+  }
+  .otherforms-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #8C7A6B;
+    transition: width 0.4s ease;
+  }
+  .otherforms-link:hover { color: #8C7A6B; }
+  .otherforms-link:hover::after { width: 100%; }
 </style>
 </head>
 <body>
@@ -109,7 +152,6 @@
     <div class="brand">
       BNB Louisville
     </div>
-
     <h1>
       Expense<br>Recorded<br><span class="successword">Successfully.</span>
     </h1>
@@ -125,6 +167,14 @@
             RECORD ANOTHER EXPENSE &rarr;
           </button>
         </a>
+      </div>
+    </div>
+
+    <div class="otherforms">
+      <div class="otherforms-label">Other Forms</div>
+      <div class="otherforms-links">
+        <a href="https://tally.so/r/aQYBYZ" class="otherforms-link">Submit Maintenance Request &rarr;</a>
+        <a href="https://tally.so/r/9qd6XE" class="otherforms-link">Log Inventory Item &rarr;</a>
       </div>
     </div>
   </div>
